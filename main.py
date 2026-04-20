@@ -10,6 +10,7 @@ from agent import agent
 app = FastAPI()
 
 UPLOAD_DIR = "uploads"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 app.add_middleware(
     CORSMiddleware,
